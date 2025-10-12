@@ -2,7 +2,7 @@ let tarefas = [];
 
 window.onload = function () {
   carregarTarefas();
-}; 
+};
 
 function Adicionar() {
   const input = document.getElementById("inputTarefa");
@@ -64,6 +64,12 @@ function mostrarTarefas() {
 function removerTarefa(indice) {
   tarefas.splice(indice, 1);
 
+  salvarTarefas();
+  mostrarTarefas();
+}
+
+function limparTodas() {
+  tarefas = [];
   salvarTarefas();
   mostrarTarefas();
 }
